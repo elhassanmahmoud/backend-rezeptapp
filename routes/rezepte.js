@@ -1,11 +1,23 @@
-// routes/rezepte.js
-
 const express = require('express')
-const router = express.Router()
-const pool = require('../config/db') // direkte Verbindung zur DB
+const cors = require('cors')
+require('dotenv').config()
+const pool = require('./config/db') // Verbindung zur Datenbank
 
-// 📥 GET /rezepte – alle Rezepte aus der Datenbank abrufen
-router.get('/', async (req, res) => {
+const app = express()
+const PORT = process.env.PORT || 3000
+
+// ✅ CORS-Konfiguration für dein Frontend auf Render
+app.use(cors({
+    origin: 'https://frontend-rezeptapp.onrender.com',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}))
+
+// 📦 JSON-Body Parser
+app.use(express.json())
+
+// 📥 GET /rezepte – holt alle Rezepte
+app.get('/rezepte', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM rezepte')
         const rezepte = result.rows.map(r => ({
@@ -20,13 +32,15 @@ router.get('/', async (req, res) => {
     }
 })
 
-// 📤 POST /rezepte – ein neues Rezept speichern
-router.post('/', async (req, res) => {
+// 📤 POST /rezepte – speichert neues Rezept
+app.post('/rezepte', async (req, res) => {
     const rezept = req.body
+
     try {
-        await pool.query(
+        const result = await pool.query(
             `INSERT INTO rezepte (name, kategorie, bild, beschreibung, favorit, zutaten, naehrwerte)
-             VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+       VALUES ($1, $2, $3, $4, $5, $6, $7)
+       RETURNING *`,
             [
                 rezept.name,
                 rezept.kategorie,
@@ -37,11 +51,14 @@ router.post('/', async (req, res) => {
                 JSON.stringify(rezept.naehrwerte)
             ]
         )
-        res.status(201).json({ message: 'Rezept erfolgreich gespeichert' })
+        res.status(201).json(result.rows[0]) // gibt das gespeicherte Rezept zurück
     } catch (err) {
         console.error('❌ Fehler bei POST /rezepte:', err)
         res.status(500).json({ error: 'Speichern fehlgeschlagen' })
     }
 })
 
-module.exports = router
+// 🚀 Server starten
+app.listen(PORT, () => {
+    console.log(`🚀 Backend läuft auf http://localhost:${PORT}`)
+})
