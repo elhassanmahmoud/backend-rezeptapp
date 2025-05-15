@@ -6,7 +6,6 @@ const pool = require('../config/db')
 const router = express.Router()
 const SECRET = process.env.JWT_SECRET || 'supergeheim'
 
-//  Registrierung
 router.post('/register', async (req, res) => {
     const { email, passwort } = req.body
     try {
@@ -22,7 +21,6 @@ router.post('/register', async (req, res) => {
     }
 })
 
-//  Login
 router.post('/login', async (req, res) => {
     const { email, passwort } = req.body
     try {
