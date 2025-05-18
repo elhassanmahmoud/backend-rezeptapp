@@ -8,7 +8,10 @@ const PORT = process.env.PORT || 3000
 
 // ✅ CORS erlauben (auch für Frontend auf Render)
 app.use(cors({
-    origin: 'https://frontend-rezeptapp.onrender.com', // oder '*', wenn du es ganz offen haben willst
+    origin: [
+        'http://localhost:5173',
+        'https://frontend-rezeptapp.onrender.com'
+    ],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']
 }))
