@@ -1,7 +1,7 @@
 services:
   - type: web
     name: backend-rezeptapp
-    env: java
+    env: docker
     buildCommand: "./gradlew build"
     startCommand: "./gradlew bootRun"
     envVars:
