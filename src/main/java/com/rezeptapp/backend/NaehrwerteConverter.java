@@ -15,7 +15,7 @@ public class NaehrwerteConverter implements AttributeConverter<Map<String, Objec
     @Override
     public String convertToDatabaseColumn(Map<String, Object> attribute) {
         try {
-            return mapper.writeValueAsString(attribute);
+            return attribute == null ? null : mapper.writeValueAsString(attribute);
         } catch (Exception e) {
             throw new RuntimeException("Could not convert Map to JSON", e);
         }
@@ -24,9 +24,10 @@ public class NaehrwerteConverter implements AttributeConverter<Map<String, Objec
     @Override
     public Map<String, Object> convertToEntityAttribute(String dbData) {
         try {
-            return mapper.readValue(dbData, new TypeReference<Map<String, Object>>() {});
+            if (dbData == null || dbData.isBlank()) return null;
+            return mapper.readValue(dbData, new TypeReference<>() {});
         } catch (Exception e) {
-            throw new RuntimeException("Could not convert JSON to Map", e);
+            return null; // alternativ: throw new RuntimeException("Invalid JSON: " + dbData, e);
         }
     }
 }
