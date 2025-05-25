@@ -1,6 +1,18 @@
 services:
   - type: web
-    name: rezeptapp-backend
+    name: backend-rezeptapp
     env: docker
     plan: free
-    branch: main
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: JDBC_DATABASE_URL
+        fromEnvVar: JDBC_DATABASE_URL
+      - key: JDBC_DATABASE_USERNAME
+        fromEnvVar: JDBC_DATABASE_USERNAME
+      - key: JDBC_DATABASE_PASSWORD
+        fromEnvVar: JDBC_DATABASE_PASSWORD
+    ports:
+      - 8080
