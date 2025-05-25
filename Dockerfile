@@ -6,5 +6,5 @@ RUN gradle build --no-daemon
 
 # Runtime-Stage mit JDK
 FROM eclipse-temurin:21-jdk-jammy
-COPY --from=build /home/gradle/src/build/libs/backend-rezeptapp-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /home/gradle/src/build/libs/backend-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
