@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.rezeptapp.backend.RezeptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-25T17:16:09.814Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.0">
+<testsuite name="com.rezeptapp.backend.RezeptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-25T20:41:51.212Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.0">
   <properties/>
   <testcase name="testToString()" classname="com.rezeptapp.backend.RezeptTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.rezeptapp.backend.RezeptControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-25T17:16:09.691Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.074">
+<testsuite name="com.rezeptapp.backend.RezeptControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-25T20:41:51.104Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.061">
   <properties/>
-  <testcase name="testGetRoute()" classname="com.rezeptapp.backend.RezeptControllerTest" time="0.074"/>
-  <system-out><![CDATA[19:16:08.705 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.rezeptapp.backend.RezeptControllerTest]: RezeptControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-19:16:08.768 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.rezeptapp.backend.RezeptappBackendApplication for test class com.rezeptapp.backend.RezeptControllerTest
+  <testcase name="testGetRoute()" classname="com.rezeptapp.backend.RezeptControllerTest" time="0.061"/>
+  <system-out><![CDATA[22:41:50.172 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.rezeptapp.backend.RezeptControllerTest]: RezeptControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:41:50.226 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.rezeptapp.backend.RezeptappBackendApplication for test class com.rezeptapp.backend.RezeptControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,12 +14,12 @@
 
  :: Spring Boot ::                (v3.4.5)
 
-2025-05-25T19:16:08.917+02:00  INFO 8947 --- [    Test worker] c.r.backend.RezeptControllerTest         : Starting RezeptControllerTest using Java 21.0.4 with PID 8947 (started by elhassanmahmoud in /Users/elhassanmahmoud/Documents/backend-rezeptapp)
-2025-05-25T19:16:08.918+02:00  INFO 8947 --- [    Test worker] c.r.backend.RezeptControllerTest         : No active profile set, falling back to 1 default profile: "default"
-2025-05-25T19:16:09.669+02:00  INFO 8947 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-05-25T19:16:09.670+02:00  INFO 8947 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-05-25T19:16:09.671+02:00  INFO 8947 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2025-05-25T19:16:09.688+02:00  INFO 8947 --- [    Test worker] c.r.backend.RezeptControllerTest         : Started RezeptControllerTest in 0.883 seconds (process running for 1.39)
+2025-05-25T22:41:50.358+02:00  INFO 13998 --- [    Test worker] c.r.backend.RezeptControllerTest         : Starting RezeptControllerTest using Java 21.0.4 with PID 13998 (started by elhassanmahmoud in /Users/elhassanmahmoud/Documents/backend-rezeptapp)
+2025-05-25T22:41:50.358+02:00  INFO 13998 --- [    Test worker] c.r.backend.RezeptControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2025-05-25T22:41:51.086+02:00  INFO 13998 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-25T22:41:51.086+02:00  INFO 13998 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-25T22:41:51.087+02:00  INFO 13998 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-05-25T22:41:51.101+02:00  INFO 13998 --- [    Test worker] c.r.backend.RezeptControllerTest         : Started RezeptControllerTest in 0.847 seconds (process running for 1.298)
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (/Users/elhassanmahmoud/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.15.11/a38b16385e867f59a641330f0362ebe742788ed8/byte-buddy-agent-1.15.11.jar)
