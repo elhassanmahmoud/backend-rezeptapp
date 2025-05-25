@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: backend-rezeptapp
+    env: java
+    buildCommand: "./gradlew build"
+    startCommand: "./gradlew bootRun"
+    envVars:
+      - key: JDBC_DATABASE_URL
+        fromEnvVar: JDBC_DATABASE_URL
+      - key: JDBC_DATABASE_USERNAME
+        fromEnvVar: JDBC_DATABASE_USERNAME
+      - key: JDBC_DATABASE_PASSWORD
+        fromEnvVar: JDBC_DATABASE_PASSWORD
