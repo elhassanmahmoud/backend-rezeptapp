@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.rezeptapp.backend.RezeptServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-26T11:30:14.883Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.041">
+<testsuite name="com.rezeptapp.backend.RezeptServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-26T11:47:56.191Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.046">
   <properties/>
-  <testcase name="should find a rezept by id" classname="com.rezeptapp.backend.RezeptServiceTest" time="0.041"/>
+  <testcase name="should find a rezept by id" classname="com.rezeptapp.backend.RezeptServiceTest" time="0.046"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
