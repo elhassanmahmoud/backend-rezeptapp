@@ -27,6 +27,7 @@ public class RezeptController {
     @CrossOrigin
     @GetMapping("/rezepte")
     public List<Rezept> getAllRezepte() {
+        System.out.println("📥 /rezepte wurde aufgerufen");
         return service.getAll();
     }
 }

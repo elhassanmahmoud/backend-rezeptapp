@@ -23,6 +23,10 @@ public class RezeptService {
     public List<Rezept> getAll() {
         List<Rezept> list = new ArrayList<>();
         repo.findAll().forEach(list::add);
+
+        // ✅ Debug-Ausgabe für Render-Log
+        System.out.println("🧪 Anzahl Rezepte in Datenbank: " + list.size());
+
         return list;
     }
 }
