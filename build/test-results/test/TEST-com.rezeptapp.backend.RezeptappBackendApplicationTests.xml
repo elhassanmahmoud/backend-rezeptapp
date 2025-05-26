@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.rezeptapp.backend.RezeptappBackendApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-25T21:23:25.441Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.001">
+<testsuite name="com.rezeptapp.backend.RezeptappBackendApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-25T22:35:38.185Z" hostname="MacBook-Air-von-Mahmoud.local" time="0.002">
   <properties/>
-  <testcase name="contextLoads()" classname="com.rezeptapp.backend.RezeptappBackendApplicationTests" time="0.001"/>
-  <system-out><![CDATA[2025-05-25T23:23:24.547+02:00  INFO 15455 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rezeptapp.backend.RezeptappBackendApplicationTests]: RezeptappBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-05-25T23:23:24.548+02:00  INFO 15455 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rezeptapp.backend.RezeptappBackendApplication for test class com.rezeptapp.backend.RezeptappBackendApplicationTests
+  <testcase name="contextLoads()" classname="com.rezeptapp.backend.RezeptappBackendApplicationTests" time="0.002"/>
+  <system-out><![CDATA[2025-05-26T00:35:37.304+02:00  INFO 18402 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.rezeptapp.backend.RezeptappBackendApplicationTests]: RezeptappBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-26T00:35:37.305+02:00  INFO 18402 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.rezeptapp.backend.RezeptappBackendApplication for test class com.rezeptapp.backend.RezeptappBackendApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,19 +14,19 @@
 
  :: Spring Boot ::                (v3.4.5)
 
-2025-05-25T23:23:24.570+02:00  INFO 15455 --- [    Test worker] c.r.b.RezeptappBackendApplicationTests   : Starting RezeptappBackendApplicationTests using Java 21.0.4 with PID 15455 (started by elhassanmahmoud in /Users/elhassanmahmoud/Documents/backend-rezeptapp)
-2025-05-25T23:23:24.570+02:00  INFO 15455 --- [    Test worker] c.r.b.RezeptappBackendApplicationTests   : The following 1 profile is active: "test"
-2025-05-25T23:23:24.682+02:00  INFO 15455 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-25T23:23:24.696+02:00  INFO 15455 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
-2025-05-25T23:23:24.833+02:00  INFO 15455 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-25T23:23:24.851+02:00  INFO 15455 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-05-25T23:23:24.863+02:00  INFO 15455 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-25T23:23:24.912+02:00  INFO 15455 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-25T23:23:24.921+02:00  INFO 15455 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-25T23:23:25.001+02:00  INFO 15455 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-05-25T23:23:25.002+02:00  INFO 15455 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-25T23:23:25.011+02:00  WARN 15455 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-25T23:23:25.020+02:00  INFO 15455 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-26T00:35:37.320+02:00  INFO 18402 --- [    Test worker] c.r.b.RezeptappBackendApplicationTests   : Starting RezeptappBackendApplicationTests using Java 21.0.4 with PID 18402 (started by elhassanmahmoud in /Users/elhassanmahmoud/Documents/backend-rezeptapp)
+2025-05-26T00:35:37.320+02:00  INFO 18402 --- [    Test worker] c.r.b.RezeptappBackendApplicationTests   : The following 1 profile is active: "test"
+2025-05-26T00:35:37.421+02:00  INFO 18402 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-26T00:35:37.435+02:00  INFO 18402 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2025-05-26T00:35:37.545+02:00  INFO 18402 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-26T00:35:37.572+02:00  INFO 18402 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-26T00:35:37.585+02:00  INFO 18402 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-26T00:35:37.634+02:00  INFO 18402 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-26T00:35:37.645+02:00  INFO 18402 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-26T00:35:37.723+02:00  INFO 18402 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-05-26T00:35:37.724+02:00  INFO 18402 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-26T00:35:37.735+02:00  WARN 18402 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-26T00:35:37.742+02:00  INFO 18402 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -34,8 +34,8 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-25T23:23:25.245+02:00  INFO 15455 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-25T23:23:25.254+02:00  WARN 15455 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table rezept (favorit boolean, id bigint generated by default as identity, beschreibung varchar(255), bild varchar(255), kategorie varchar(255), naehrwerte jsonb, name varchar(255), zutaten jsonb, primary key (id))" via JDBC [Unbekannter Datentyp: "JSONB"
+2025-05-26T00:35:37.993+02:00  INFO 18402 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-26T00:35:38.003+02:00  WARN 18402 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table rezept (favorit boolean, id bigint generated by default as identity, beschreibung varchar(255), bild varchar(255), kategorie varchar(255), naehrwerte jsonb, name varchar(255), zutaten jsonb, primary key (id))" via JDBC [Unbekannter Datentyp: "JSONB"
 Unknown data type: "JSONB";]
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table rezept (favorit boolean, id bigint generated by default as identity, beschreibung varchar(255), bild varchar(255), kategorie varchar(255), naehrwerte jsonb, name varchar(255), zutaten jsonb, primary key (id))" via JDBC [Unbekannter Datentyp: "JSONB"
@@ -200,9 +200,9 @@ create table rezept (favorit boolean, id bigint generated by default as identity
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
 	... 131 common frames omitted
 
-2025-05-25T23:23:25.259+02:00  INFO 15455 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-25T23:23:25.371+02:00  WARN 15455 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-25T23:23:25.440+02:00  INFO 15455 --- [    Test worker] c.r.b.RezeptappBackendApplicationTests   : Started RezeptappBackendApplicationTests in 0.889 seconds (process running for 2.417)
+2025-05-26T00:35:38.008+02:00  INFO 18402 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-26T00:35:38.125+02:00  WARN 18402 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-26T00:35:38.185+02:00  INFO 18402 --- [    Test worker] c.r.b.RezeptappBackendApplicationTests   : Started RezeptappBackendApplicationTests in 0.878 seconds (process running for 2.425)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
