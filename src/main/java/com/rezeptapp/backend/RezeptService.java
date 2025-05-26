@@ -24,8 +24,13 @@ public class RezeptService {
         List<Rezept> list = new ArrayList<>();
         repo.findAll().forEach(list::add);
 
-        // ✅ Debug-Ausgabe für Render-Log
         System.out.println("🧪 Anzahl Rezepte in Datenbank: " + list.size());
+
+        for (Rezept r : list) {
+            System.out.println("➡️ Rezept geladen: " + r.getName() + " (" + r.getId() + ")");
+            System.out.println("   🧂 Zutaten: " + r.getZutaten());
+            System.out.println("   🔬 Nährwerte: " + r.getNaehrwerte());
+        }
 
         return list;
     }
