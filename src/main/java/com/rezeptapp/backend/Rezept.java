@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 @Entity
+@Table(name = "rezepte")  // 🔧 Diese Zeile ist neu!
 public class Rezept {
 
     @Id
@@ -26,10 +27,8 @@ public class Rezept {
     @Convert(converter = NaehrwerteConverter.class)
     private Map<String, Object> naehrwerte;
 
-    // 🛠️ Standard-Konstruktor für JPA
     public Rezept() {}
 
-    // 🛠️ Getter & Setter
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
