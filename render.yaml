@@ -9,10 +9,10 @@ services:
     startCommand: ""
     envVars:
       - key: DB_URL
-        fromEnvVar: DB_URL
+        value: jdbc:postgresql://dpg-d0h237be5dus73aq2trg-a.oregon-postgres.render.com:5432/elhassanmahmoud_db
       - key: DB_USERNAME
-        fromEnvVar: DB_USERNAME
+        value: elhassanmahmoud
       - key: DB_PASSWORD
-        fromEnvVar: DB_PASSWORD
+        value: Ra06Qpk42kCvkbbMS3ddFFbLp26pTWbo
     ports:
       - 8080
