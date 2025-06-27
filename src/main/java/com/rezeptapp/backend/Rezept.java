@@ -1,9 +1,7 @@
 package com.rezeptapp.backend;
 
 import jakarta.persistence.*;
-
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Entity
 @Table(name = "rezepte")
@@ -21,14 +19,16 @@ public class Rezept {
 
     @Column(columnDefinition = "jsonb")
     @Convert(converter = ZutatenConverter.class)
-    private List<Zutat> zutaten;
+    private List<Zutat> zutaten = new ArrayList<>(); // ✅ Initialisiert
 
     @Column(columnDefinition = "jsonb")
     @Convert(converter = NaehrwerteConverter.class)
-    private Map<String, Object> naehrwerte;
+    private Map<String, Object> naehrwerte = new HashMap<>(); // ✅ Initialisiert
 
+    // Konstruktoren
     public Rezept() {}
 
+    // Getter & Setter
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -52,9 +52,4 @@ public class Rezept {
 
     public Map<String, Object> getNaehrwerte() { return naehrwerte; }
     public void setNaehrwerte(Map<String, Object> naehrwerte) { this.naehrwerte = naehrwerte; }
-
-    @Override
-    public String toString() {
-        return "Rezept{id=" + id + ", name='" + name + "', kategorie='" + kategorie + "'}";
-    }
 }
