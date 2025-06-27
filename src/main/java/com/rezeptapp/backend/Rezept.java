@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 @Entity
-@Table(name = "rezepte")  // 🔧 Diese Zeile ist neu!
+@Table(name = "rezepte")
 public class Rezept {
 
     @Id
@@ -21,7 +21,7 @@ public class Rezept {
 
     @Column(columnDefinition = "jsonb")
     @Convert(converter = ZutatenConverter.class)
-    private List<Map<String, Object>> zutaten;
+    private List<Zutat> zutaten;
 
     @Column(columnDefinition = "jsonb")
     @Convert(converter = NaehrwerteConverter.class)
@@ -47,8 +47,8 @@ public class Rezept {
     public Boolean getFavorit() { return favorit; }
     public void setFavorit(Boolean favorit) { this.favorit = favorit; }
 
-    public List<Map<String, Object>> getZutaten() { return zutaten; }
-    public void setZutaten(List<Map<String, Object>> zutaten) { this.zutaten = zutaten; }
+    public List<Zutat> getZutaten() { return zutaten; }
+    public void setZutaten(List<Zutat> zutaten) { this.zutaten = zutaten; }
 
     public Map<String, Object> getNaehrwerte() { return naehrwerte; }
     public void setNaehrwerte(Map<String, Object> naehrwerte) { this.naehrwerte = naehrwerte; }

@@ -3,11 +3,10 @@ package com.rezeptapp.backend;
 public class Zutat {
     private String name;
     private String menge;
-    private String kategorie; // z. B. "Italienisch", "Asiatisch"
-    private String symbol; // z. B. 🍅 oder 🍜
+    private String kategorie;
+    private String symbol;
     private String kochanleitung;
 
-    // Konstruktor
     public Zutat() {}
 
     public Zutat(String name, String menge, String kategorie, String symbol, String kochanleitung) {
@@ -18,7 +17,6 @@ public class Zutat {
         this.kochanleitung = kochanleitung;
     }
 
-    // Getter & Setter
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
