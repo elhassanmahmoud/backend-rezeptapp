@@ -5,28 +5,29 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 @Converter
-public class ZutatenConverter implements AttributeConverter<List<Zutat>, String> {
-    private final ObjectMapper mapper = new ObjectMapper();
+public class ZutatenConverter implements AttributeConverter<List<Map<String, Object>>, String> {
+
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
-    public String convertToDatabaseColumn(List<Zutat> zutaten) {
+    public String convertToDatabaseColumn(List<Map<String, Object>> zutaten) {
         try {
-            return mapper.writeValueAsString(zutaten == null ? new ArrayList<>() : zutaten); // ✅ sicherer
+            return objectMapper.writeValueAsString(zutaten);
         } catch (Exception e) {
             throw new RuntimeException("Fehler beim Konvertieren der Zutaten in JSON", e);
         }
     }
 
     @Override
-    public List<Zutat> convertToEntityAttribute(String json) {
+    public List<Map<String, Object>> convertToEntityAttribute(String dbData) {
         try {
-            return (json == null || json.isBlank()) ? new ArrayList<>() :
-                    mapper.readValue(json, new TypeReference<List<Zutat>>() {});
+            return objectMapper.readValue(dbData, new TypeReference<>() {});
         } catch (Exception e) {
-            throw new RuntimeException("Fehler beim Laden der Zutaten aus JSON", e);
+            throw new RuntimeException("Fehler beim Einlesen der Zutaten aus JSON", e);
         }
     }
 }

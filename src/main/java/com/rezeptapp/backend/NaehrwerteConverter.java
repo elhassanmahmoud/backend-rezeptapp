@@ -5,29 +5,28 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
-import java.util.*;
+import java.util.Map;
 
 @Converter
 public class NaehrwerteConverter implements AttributeConverter<Map<String, Object>, String> {
 
-    private final ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
-    public String convertToDatabaseColumn(Map<String, Object> attribute) {
+    public String convertToDatabaseColumn(Map<String, Object> naehrwerte) {
         try {
-            return mapper.writeValueAsString(attribute == null ? new HashMap<>() : attribute); // ✅ sicher
+            return objectMapper.writeValueAsString(naehrwerte);
         } catch (Exception e) {
-            throw new RuntimeException("Fehler beim Konvertieren der Nährwerte", e);
+            throw new RuntimeException("Fehler beim Konvertieren der Nährwerte in JSON", e);
         }
     }
 
     @Override
     public Map<String, Object> convertToEntityAttribute(String dbData) {
         try {
-            return (dbData == null || dbData.isBlank()) ? new HashMap<>() :
-                    mapper.readValue(dbData, new TypeReference<Map<String, Object>>() {});
+            return objectMapper.readValue(dbData, new TypeReference<>() {});
         } catch (Exception e) {
-            throw new RuntimeException("Fehler beim Laden der Nährwerte", e);
+            throw new RuntimeException("Fehler beim Einlesen der Nährwerte aus JSON", e);
         }
     }
 }
