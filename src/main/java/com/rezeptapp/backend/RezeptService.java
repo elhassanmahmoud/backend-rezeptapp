@@ -34,4 +34,9 @@ public class RezeptService {
 
         return list;
     }
+
+    // ✅ HINZUGEFÜGT
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
 }
