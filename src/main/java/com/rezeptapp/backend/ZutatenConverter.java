@@ -9,25 +9,24 @@ import java.util.List;
 import java.util.Map;
 
 @Converter
-public class ZutatenConverter implements AttributeConverter<List<Map<String, Object>>, String> {
+public class ZutatenConverter implements AttributeConverter<List<Zutat>, String> {
     private final ObjectMapper mapper = new ObjectMapper();
 
     @Override
-    public String convertToDatabaseColumn(List<Map<String, Object>> attribute) {
+    public String convertToDatabaseColumn(List<Zutat> zutaten) {
         try {
-            return attribute == null ? null : mapper.writeValueAsString(attribute);
+            return mapper.writeValueAsString(zutaten);
         } catch (Exception e) {
-            throw new RuntimeException("Could not convert List to JSON", e);
+            throw new RuntimeException("Fehler beim Konvertieren der Zutaten in JSON", e);
         }
     }
 
     @Override
-    public List<Map<String, Object>> convertToEntityAttribute(String dbData) {
+    public List<Zutat> convertToEntityAttribute(String json) {
         try {
-            if (dbData == null || dbData.isBlank()) return null;
-            return mapper.readValue(dbData, new TypeReference<>() {});
+            return mapper.readValue(json, new TypeReference<List<Zutat>>() {});
         } catch (Exception e) {
-            return null; // alternativ: throw new RuntimeException("Invalid JSON: " + dbData, e);
+            throw new RuntimeException("Fehler beim Laden der Zutaten aus JSON", e);
         }
     }
 }

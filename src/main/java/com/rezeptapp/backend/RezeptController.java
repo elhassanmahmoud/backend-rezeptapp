@@ -30,4 +30,17 @@ public class RezeptController {
         System.out.println("📥 /rezepte wurde aufgerufen");
         return service.getAll();
     }
+
+    @CrossOrigin
+    @DeleteMapping("/rezepte/{id}")
+    public void deleteRezept(@PathVariable Long id) {
+        service.delete(id);
+    }
+
+    @CrossOrigin
+    @PutMapping("/rezepte/{id}")
+    public Rezept updateRezept(@PathVariable Long id, @RequestBody Rezept rezept) {
+        rezept.setId(id);
+        return service.save(rezept);
+    }
 }
