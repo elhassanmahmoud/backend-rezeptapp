@@ -19,11 +19,11 @@ public class Rezept {
 
     @Column(columnDefinition = "jsonb")
     @Convert(converter = ZutatenConverter.class)
-    private List<Zutat> zutaten = new ArrayList<>(); // ✅ Initialisiert
+    private List<Zutat> zutaten = new ArrayList<>(); //  Initialisiert
 
     @Column(columnDefinition = "jsonb")
     @Convert(converter = NaehrwerteConverter.class)
-    private Map<String, Object> naehrwerte = new HashMap<>(); // ✅ Initialisiert
+    private Map<String, Object> naehrwerte = new HashMap<>(); //  Initialisiert
 
     // Konstruktoren
     public Rezept() {}

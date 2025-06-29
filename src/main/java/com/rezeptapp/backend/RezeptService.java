@@ -24,18 +24,18 @@ public class RezeptService {
         List<Rezept> list = new ArrayList<>();
         repo.findAll().forEach(list::add);
 
-        System.out.println("🧪 Anzahl Rezepte in Datenbank: " + list.size());
+        System.out.println(" Anzahl Rezepte in Datenbank: " + list.size());
 
         for (Rezept r : list) {
-            System.out.println("➡️ Rezept geladen: " + r.getName() + " (" + r.getId() + ")");
-            System.out.println("   🧂 Zutaten: " + r.getZutaten());
-            System.out.println("   🔬 Nährwerte: " + r.getNaehrwerte());
+            System.out.println("➡ Rezept geladen: " + r.getName() + " (" + r.getId() + ")");
+            System.out.println("    Zutaten: " + r.getZutaten());
+            System.out.println("    Nährwerte: " + r.getNaehrwerte());
         }
 
         return list;
     }
 
-    // ✅ HINZUGEFÜGT
+    //  HINZUGEFÜGT
     public void delete(Long id) {
         repo.deleteById(id);
     }

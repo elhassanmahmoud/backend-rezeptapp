@@ -37,7 +37,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-// ⬇️ .env-Datei einlesen – notwendig für lokale Entwicklung und Render-Build
+//  .env-Datei einlesen – notwendig für lokale Entwicklung und Render-Build
 def envFile = file('.env')
 if (envFile.exists()) {
 	println '.env gefunden – Lade Umgebungsvariablen für den Build...'
@@ -52,7 +52,7 @@ if (envFile.exists()) {
 	}
 }
 
-// ⬇️ Environment-Variablen an bootRun übergeben (nachdem ext befüllt wurde)
+//  Environment-Variablen an bootRun übergeben (nachdem ext befüllt wurde)
 tasks.named('bootRun') {
 	if (ext.has('DB_URL')) {
 		environment 'DB_URL', ext['DB_URL']
