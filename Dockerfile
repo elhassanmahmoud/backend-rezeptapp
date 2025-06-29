@@ -3,7 +3,7 @@ FROM gradle:jdk21-jammy AS build
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 
-# ⛔ Tests werden hier bewusst übersprungen
+#  Tests werden hier bewusst übersprungen
 RUN gradle build -x test --no-daemon
 
 # Runtime-Stage mit JDK
