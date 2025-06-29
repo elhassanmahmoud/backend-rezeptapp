@@ -29,4 +29,4 @@ public class NaehrwerteConverter implements AttributeConverter<Map<String, Objec
             throw new RuntimeException("Fehler beim Einlesen der Nährwerte aus JSON", e);
         }
     }
-}
+}//
